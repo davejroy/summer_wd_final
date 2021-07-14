@@ -2,18 +2,26 @@
 
 /* Main container box for entire page has two child blocks -yellow top block - orange bottom box */
 #container {
-border: 1px solid black;
+/* border: 1px solid black; */
 display: flex-column;
-background-color: lightgoldenrodyellow;
+background-color: ;
 width: 98%;
 padding: 1%;
 height: 100%
 width: 100%;
 }
 
+.navMenu {
+    display: flex;
+    justify-content: space-around;
+    border: 0px;
+    background-color: grey
+
+}
+
 /* main image block - yellow box*/
-#topBox{
-border: 2px solid yellow;
+#topBox { 
+/* border: 2px solid yellow; */
 display: flex;
 width: 98%;
 height: 80%;    
@@ -21,12 +29,13 @@ height: 80%;
 
 /* Product image box */
 .productImage {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     height:98%;
     width: 40%;
     align-items: center;
     margin: auto;
+    background-color: ivory;
     }
 
 /*product image size within image box */    
@@ -37,7 +46,7 @@ height: 80%;
 
 /* product info box has product info and buttons for "goto review" and "add to cart"*/
 .productInfo {
-    border: 2px solid green;
+/* border: 2px solid green; */
     display: flex-column;
     height:98%;
     width: 58%;
@@ -45,41 +54,42 @@ height: 80%;
 
 /* product name, brand, and price */
 .productPrice {
-    border: 2px solid grey;
-    margin-left: 1%;
+    /* border: 2px solid grey; */
+    margin-left: auto;
     text-align: center;
     }
 
-.buttonsBox{
-    border: 2px solid red;
+/* Red box to hold two boxes for buttons */    
+.buttonsBox {
+    /* border: 2px solid red; */
     height: 98%;
     width: 98%;
-    margin: 1%;
+    margin: auto;
     display: flex;
     align-content: center;
     justify-content: center;
 
 }
 
-#reviewsButton {
-    border: 2px solid salmon;
+/* 1st box inside red box for button 1 for getReviews*/
+.reviewsButton {
+    /* border: 2px solid salmon; */
     box-shadow: 2px;
     height: auto;
     width: auto;
     margin-right: 4%;
-    
 }
-
-#cartButton {
-    border: 2px solid purple;
+/* 2nd box inside red box to hold button 2 for getCart*/
+.cartButton {
+    /* border: 2px solid purple; */
     box-shadow: 2px;
-   
 }
 /* Bottom of page orange comments box */
-.commentsBox{
-border: 2px solid orange;
+.commentsBox {
+/* border: 2px solid orange; */
 width: 98%;
 height: 20%; 
-
+text-align: center;
+margin: 2%;
 }
 
