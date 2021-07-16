@@ -1,13 +1,13 @@
-
-
 /* Main container box for entire page has two child blocks -yellow top block - orange bottom box */
+
+/* GLOBAL RULES */
 #container {
 /* border: 1px solid black; */
 display: flex-column;
 background-color: ;
 width: 98%;
 padding: 1%;
-height: 100%
+height: 100%;
 width: 100%;
 }
 
@@ -27,6 +27,11 @@ width: 98%;
 height: 80%;    
 }
 
+.picSize {
+    height: 98%;
+    width: 98%;
+}
+
 /* Product image box */
 .productImage {
     /* border: 2px solid blue; */
@@ -36,27 +41,29 @@ height: 80%;
     align-items: center;
     margin: auto;
     background-color: ivory;
+    transition: transform .2s; /* Animation */
     }
 
 /*product image size within image box */    
-.picSize {
-    height: 98%;
-    width: 98%;
-}
+  .productImage:hover {
+    transform-origin: 0% 40%;  
+    transform: scale(2.5); /* (250% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
 
 /* product info box has product info and buttons for "goto review" and "add to cart"*/
 .productInfo {
-/* border: 2px solid green; */
+border: 2px solid black;
     display: flex-column;
     height:98%;
     width: 58%;
+    background-color: azure;
 }
 
 /* product name, brand, and price */
 .productPrice {
     /* border: 2px solid grey; */
-    margin-left: auto;
-    text-align: center;
+    margin-left: 2%;
+    text-align: left;
     }
 
 /* Red box to hold two boxes for buttons */    
@@ -68,6 +75,7 @@ height: 80%;
     display: flex;
     align-content: center;
     justify-content: center;
+    padding-bottom: 2%;
 
 }
 
@@ -86,10 +94,100 @@ height: 80%;
 }
 /* Bottom of page orange comments box */
 .commentsBox {
-/* border: 2px solid orange; */
-width: 98%;
+border: 2px solid black;
+width: 94%;
 height: 20%; 
 text-align: center;
 margin: 2%;
 }
+
+.commentsBox {
+
+text-align: justify;
+padding: 1% 1% 1% 1%;
+background-color: lemonchiffon;
+}
+
+.modal {
+    display: flex-column;
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    background-color: aliceblue;
+    visibility: hidden;
+    text-align: justify;
+    padding-left: 2%;
+
+    font-family: Arial;
+    font-size: 1em;
+    line-height: 30px;
+    font-weight: bold;
+    color: black;
+    padding: 40px;
+    box-shadow: 0 0 0 10px #009688;
+    border: 10px solid #009688;
+    outline: dashed 10px white;
+}
+
+.modalHeader{
+text-align: center;
+font: bolder;
+color: darkgreen;
+text-shadow: 1px blue;
+
+}
+
+.closeButton{
+display: flex;
+margin: auto;
+background-color: #009688;
+    
+}
+
+.modal-content{
+display: flex;
+
+
+}
+
+.modalImage{
+display: flex-;
+/* justify-content: space-around; */
+height: 25px;
+width: 100px;
+padding-right: 1%;
+
+}
+
+.specsheetModal {
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    background-color: aliceblue;
+    visibility: hidden;
+    text-align: center;
+    border: solid 2px darkslategrey;
+}
+
+.product-filter {
+    display: flex;
+  }
+
+  .product-filter h1 {
+    flex-grow: 1;
+  }
+  .sort {
+    display: flex;
+  }
+
+  .collection-sort {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-image{
+    height: 50px;
+    width: 150px;
+
+  } 
 

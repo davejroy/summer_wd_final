@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,47 +9,130 @@
     <script src="./script.js"></script>
     <title>Shopping Cart</title>
 </head>
+
 <body>
-    <div class="navMenu">                                     <!-- Page Nav Menu   -->
-        <div><button href="./index">Home</button></div>
-        <div><button href="./productPage.html">Products</button></div>
-        <div><button class="goToCart">cart</button></div>
-    </div>
-    <div id="container">                                        <!-- Outter box Black Box-->
-        <div id="topBox">                                       <!-- Yellow Box top main box -->  
-                                                                <!-- has blue image box green container box 
-                                                                     with grey name and price box and red box that contains the salmon box 
-                                                                     with goto reviews button and a purple box with add to cart button --> 
-            <div class="productImage">                          <!-- Product Image Blue box -->
-                <img class="picSize" src="./images/Cisco 6300.png" alt="Cisco 6300">
-            </div>                                              <!-- CLOSE Porduct Image BLUE BOX -->                   
-            <div class="productInfo">                           <!--  Green box-->  <!-- contains grey box and red box -->
-                <div class="productPrice">                      <!--  Grey product info box - name - brand - price -->
-                    <h1 class="productName">UCS 6332 Fabric Interconnect</h1>
-                    <h2 class="productBrand">Cisco</h2>
-                    <h3 class="productCost">$1500</h3>
-                </div>                                          <!--  CLOSE GREY product info box -->
-                <div class="buttonsBox">                        <!--  red box with salmon and red box for buttons -->  
-                    <div class="reviewsButton">                 <!--  reviews button box SALMON -->
-                        <button class="getRevies">Go To Reviews/Comments</button>
-                    </div>                                      <!--  Close reviews button box SALMON -->                          
-                    <div  class="cartButton">                      <!--  Add to Cart button purple box -->
-                        <button class="addToCart">Add To Cart</button>
-                    </div>                                      <!--  CLOSE Add to Cart button purple box -->
-                </div>                                          <!-- CLOSE RED BUTTONS BOX -->
-            </div>                                              <!-- CLOSE GREEN productInfo box-->
-        </div>                                                  <!--  CLOSE Yellow Top Box -->
-        <div class="commentsBox">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero magni culpa ullam sed cupiditate! Laborum enim id voluptatibus odio officia et dolore? Nobis architecto officiis quis accusamus nihil natus maiores?</p>
-            <br>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae cum nemo explicabo laudantium ullam, maxime ab quo cupiditate commodi. Esse optio culpa voluptas provident, atque ullam porro tempore repudiandae nobis.</p>
-        </div>   
-        
-        <!--  Place Model Here for pop up shopping cart -->
 
-    </div>                                                      <!--  CLOSE Black page block -->
+    <div style="background-image: url('./images/background.jpeg');"></div>
+
+    <!--  Model for shopping Cart -->
+    <section class="add-to-sopping-cart">
+        <div class="modal" id="modal">
+
+            <div class="modalHeader">
+                <h1>Shopping Cart</h1>
+            </div>
+          
+            <div class="modal-content">
+                <div class="modalImage">
+                    <img class="picSize" src="./images/Cisco 6300.png" alt="Cisco 6300">
+                </div>
+                <div>
+                </div>
+                <div>
+                <h3>UCS 6332 Fabric Interconnect</h3>
+                   <h3>Model: Cisco 6332</h3>
+                   <h3>Brand: Cisco</h3>
+                   <h3>Price: $2500</h3>
+                </div>    
+                <div class="closeButton">
+                    <button onclick="closeModal()"> Close</button>                
+                </div>
+                
+            </div>
+        </div>
+    </section>
+ <!-- End Shopping Cart Modal -->
+      
+ <!-- Begin Spec Sheet Model  -->
     
+    <div class="specsheetModal" id="specsheetModal">
+        
+        <header>Shopping Cart</header>
+    
+
+    <div class="specheet-modal-content">
+    
+        <h2> Shopping Cart Contents</h2>
+
+        <div class="closeButton">
+            <button onclick="closeSpecksheet()"> Close</button>                
+        </div>
+        
+    </div>
+</div>
+<!-- End Spec Sheet Modal-->   
+
+    <div class="navMenu">
+        <!-- Page Nav Menu   -->
+        <div>
+            <button onclick="openPDF()">Spec Sheet</button> 
+        </div>
+        <div>
+            <button onclick href="./productPage.html">Products</button>
+        </div>
+        <div><button onclick="openModal()">Cart</button>
+        </div>
+    </div>
+    <div id="container">
+        <!-- Outter box Black Box-->
+        <div id="topBox">
+            <!-- Yellow Box top main box -->
+            <!-- has blue image box green container box 
+                with grey name and price box and red box that contains the salmon box 
+                with goto reviews button and a purple box with add to cart button -->
+            <div class="productImage">
+                <!-- Product Image Blue box -->
+                <img class="picSize" src="./images/Cisco 6300.png" alt="Cisco 6300">
+            </div> <!-- CLOSE Porduct Image BLUE BOX -->
+            <div class="productInfo">
+                <!--  Green box-->
+                <!-- contains grey box and red box -->
+                <div class="productPrice">
+                    <!--  Grey product info box - name - brand - price -->
+                    <h1 class="productName">UCS 6332 Fabric Interconnect</h1>
+                    <h2 class="productModel">Model: Cisco 6332</h2>
+                    <h2 class="productBrand">Brand: Cisco</h2>
+                    <h3 class="productCost">Price: $2500</h3>
+                </div> <!--  CLOSE GREY product info box -->
+                <div class="buttonsBox">
+                    <!--  red box with salmon and red box for buttons -->
+                    <div class="reviewsButton">
+                        <!--  reviews button box SALMON -->
+                        <button class="getReviews"
+                            onclick="pageScroll()">Go To
+                            Reviews / Comments</button>
+                    </div> <!--  Close reviews button box SALMON -->
+                    <div class="cartButton">
+                        <!--  Add to Cart button purple box -->
+                        <button class="addToCart" onclick="addToCart()">Add To Cart</button>
+                    </div> <!--  CLOSE Add to Cart button purple box -->
+                </div> <!-- CLOSE RED BUTTONS BOX -->
+            </div> <!-- CLOSE GREEN productInfo box-->
+        </div> <!--  CLOSE Yellow Top Box -->
+        <div class="commentsBox">
+            <h2>Reviews / Comments</h2>
+            <p>The Cisco UCS 6300 Series Fabric Interconnects are a core part of the Cisco Unified Computing System,
+                providing both network connectivity and management capabilities for the system. The Cisco UCS 6300
+                Series offers line-rate, low-latency, lossless 40-Gigabit Ethernet, Fibre Channel over Ethernet (FCoE),
+                and Fibre Channel functions, as well as unified ports capable of either Ethernet or Fibre Channel
+                operation.</p>
+            <br>
+            <p>The Cisco UCS 6300 Series Fabric Interconnects provide the management and communication backbone for the
+                Cisco UCS B-Series and C-Series servers. All servers attached to the Cisco UCS 6300 Series Fabric
+                Interconnects become part of a single, highly available management domain. In addition, by supporting
+                unified fabric, the Cisco UCS 6300 Series provides both the LAN and SAN connectivity for all blades
+                within its domain.</p>
+            <br>
+            <p>From a networking perspective, the Cisco UCS 6300 Series uses a cut-through architecture, supporting
+                deterministic, low-latency, line-rate 40-Gigabit Ethernet on all ports, switching capacity of up to 2.56
+                Tbps, and 320-Gbps bandwidth per chassis, independent of packet size and enabled services. The product
+                family supports Cisco® low-latency, lossless 40-Gigabit Ethernet unified network fabric capabilities,
+                which increase the reliability, efficiency, and scalability of Ethernet networks. The fabric
+                interconnect supports multiple traffic classes over a lossless Ethernet fabric from the blade through
+                the interconnect.</p>
+        </div>
+    </div> <!--  CLOSE Black outter page block -->
+
 </body>
+
 </html>
-
-
